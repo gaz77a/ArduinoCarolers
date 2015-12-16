@@ -2,9 +2,11 @@
 #include "SongUtils.h"
 #include "Foundation.h"
 #include <IRremote.h>
+#include <IRremoteInt.h>
 
 int curDeviceNumber = -1;
 int lastMsg=-1;
+
 int RECV_PIN = 11; // define input pin on Arduino
 IRrecv irrecv(RECV_PIN);
 decode_results results;
@@ -35,6 +37,29 @@ void loop()
     irrecv.resume(); // Receive the next value
 
     /*
+    Serial.println(results.value, HEX);
+    
+    int *msgParts = DecodeIRMessage(results.value);
+    if (MsgForDevice = -1)
+    {
+      //This Message is not a valid message from arduino device, check if it is from Remote
+    }
+    irrecv.resume(); // Receive the next value
+
+    //Check master
+    if(results.value < 10){
+      Serial.println("Received Device number:"+results.value);
+      Serial.println("Check master");
+      CheckMaster();
+    }
+    
+    if (results.value == 0xA90) //if receive, Power button
+    {
+      Serial.println("Received Power button from Sony Remote, send device number");
+      SendDeviceNumber();
+      irrecv.enableIRIn(); // Start the receiver
+    }
+
     if (results.value == 0x010)
     {
       Serial.println(F("Received No 1 from Sony Remote"));
@@ -76,5 +101,7 @@ void loop()
     */
   } 
 }
+
+
 
 

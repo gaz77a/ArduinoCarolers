@@ -1,6 +1,14 @@
 #ifndef SongUtilsHeader
   #define SongUtilsHeader
-    
+
+  // Song Enum
+  enum Song
+  {
+    JingleBells = 1,
+    MerryChristmas = 2,
+    ChristmasIsComing = 3
+  };
+  
   // Song
   typedef struct
   {

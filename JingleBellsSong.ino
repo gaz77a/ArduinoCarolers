@@ -1,6 +1,4 @@
-#include "JingleBells.h"
-#include "Foundation.h"
-
+#include "JingleBellsSong.h"
 void PlayJingleBells(int partNumber)
 {  
   switch (partNumber)

@@ -9,6 +9,24 @@ unsigned long CalcDurationMs( byte duration, byte tempo )
   return result;
 }
 
+void PlaySong(enum Song songNo, int partNo)
+{
+  switch(songNo)
+  {
+    case JingleBells:
+      PlayJingleBells(partNo);
+      break;
+      
+    case MerryChristmas:
+      PlayWeWishYouAMerryChristmas(partNo);
+      break;
+
+    case ChristmasIsComing:
+      PlayWeWishYouAMerryChristmas(partNo);
+      break;
+  }
+}
+
 void PlayTune(const NoteType *tune, size_t numNotes)
 {
   unsigned long durationMs;
@@ -19,4 +37,3 @@ void PlayTune(const NoteType *tune, size_t numNotes)
     delay(durationMs * 1.05);
   }
 }
-
