@@ -25,13 +25,13 @@
   
   const NoteType MerryChristmasDeviceTwo[]  =
     { {Z1, Taahahah},
-      {Z1, Ta},     {Z1, Ta},  {Z1, Ti},  {Z1, Ti},  {Z1, Ti},  {Z1, Ti},        {Z1, Ta},  {Z1, Ta},  {Z1, Ta},
+      {Z1, Ta},     {Z1, Taahah},                                                  {Z1, Taahah},
   //Rest
-                    {Z1, Ta},  {Z1, Ti},  {Z1, Ti},  {Z1, Ti},  {Z1, Ti},        {Z1, Ta},  {Z1, Ta},  {Z1, Ta},  
+                    {Z1, Taahah},                                                  {Z1, Taahah},  
   //Rest
-                    {Z1, Ta},  {Z1, Ti},  {Z1, Ti},  {Z1, Ti},  {Z1, Ti},         {Z1, Ta},  {Z1, Ta},  {Z1, Ti},  {Z1, Ti},
+                    {Z1, Taahah},                                                  {Z1, Taahah},
   //Rest
-                    {Z1, Ta},  {Z1, Ta},  {Z1, Ta},                               {Z1, Taah},  {D4, Ta},
+                    {Z1, Taahah},                                                  {Z1, Taah},  {D4, Ta},
   //Rest - Good
                     {G3, Ta},  {G3, Ti},  {A3a, Ti},  {B3, Ti},  {C4, Ti},         {D4, Ti},  {E4, Ti},  {D4, Ta},  {B3, Ta},   
   //tidings we bring To
@@ -45,13 +45,13 @@
   
   const NoteType MerryChristmasDeviceThree[]  =
     { {Z1, Taahahah},
-      {Z1, Ta},     {Z1, Ta},  {Z1, Ti},  {Z1, Ti},  {Z1, Ti},  {Z1, Ti},        {Z1, Ta},  {Z1, Ta},  {Z1, Ta},
+      {Z1, Ta},     {Z1, Taahah},                                                  {Z1, Taahah},
   //Rest
-                    {Z1, Ta},  {Z1, Ti},  {Z1, Ti},  {Z1, Ti},  {Z1, Ti},        {Z1, Ta},  {Z1, Ta},  {Z1, Ta},  
+                    {Z1, Taahah},                                                  {Z1, Taahah},  
   //Rest
-                    {Z1, Ta},  {Z1, Ti},  {Z1, Ti},  {Z1, Ti},  {Z1, Ti},         {Z1, Ta},  {Z1, Ta},  {Z1, Ti},  {Z1, Ti},
+                    {Z1, Taahah},                                                  {Z1, Taahah},
   //Rest
-                    {Z1, Ta},  {Z1, Ta},  {Z1, Ta},                               {Z1, Taah},  {Z1, Ta},
+                    {Z1, Taahah},                                                  {Z1, Taahah},
   //Rest
                     {B3, Taahah},                                                 {A3a, Taahah},   
   //tidings we bring To
@@ -63,5 +63,26 @@
   //Happy new year
     };
 
+  const NoteType MerryChristmasDeviceFour[]  =
+    { {Z1, Taahahah},
+      {Z1, Ta},     {Z1, Taahah},                                                  {Z1, Taahah},
+  //Rest
+                    {Z1, Taahah},                                                  {Z1, Taahah},  
+  //Rest
+                    {Z1, Taahah},                                                  {Z1, Taahah},
+  //Rest
+                    {Z1, Taahah},                                                  {Z1, Taahah},
+  //Rest
+                    {D3, Taahah},                                                 {D3, Taahah},   
+  //tidings we bring To
+                    {C3s, Taahah},                                                 {D3, Taahah},   
+  //you and your kin. We
+                    {G3, Ta},  {F3s, Ta},  {D3, Ta},                                {G3, Ta},  {B2, Taah},
+  //Wish you a merry Christmas, and a
+                    {B2, Ta},  {E3, Ta},  {D3, Ta},                                 {D3, Taahah}
+  //Happy new year
+    };
+
 #endif
     
+

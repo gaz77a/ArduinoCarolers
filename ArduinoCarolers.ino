@@ -1,30 +1,40 @@
 #include "ArduinoCarolers.h"
 #include "SongUtils.h"
+#include "Foundation.h"
 #include <IRremote.h>
 
 int curDeviceNumber = -1;
-
+int lastMsg=-1;
 int RECV_PIN = 11; // define input pin on Arduino
 IRrecv irrecv(RECV_PIN);
 decode_results results;
 
 void setup()
 {
-  Serial.begin(9600);
+  //Serial.begin(9600);
   curDeviceNumber = GetDeviceId();
-  Serial.print( F("Device number is "));
-  Serial.println(curDeviceNumber);
+  //Serial.print( F("Device number is "));
+  //Serial.println(curDeviceNumber);
   
   irrecv.enableIRIn(); // Start the receiver
   pinMode(piezo, OUTPUT);
 }
-
+       
 void loop()
 {
   if (irrecv.decode(&results))
   {
-    Serial.println(results.value, HEX);
+    //Serial.println(results.value, HEX);
+
+    if (lastMsg != results.value)
+    {
+      lastMsg = results.value;
+      ProcessIrReceived(lastMsg);
+    }
+
     irrecv.resume(); // Receive the next value
+
+    /*
     if (results.value == 0x010)
     {
       Serial.println(F("Received No 1 from Sony Remote"));
@@ -63,7 +73,8 @@ void loop()
     {
       Serial.println(F("Received PLAY from Sony Remote"));
     }
-  }
+    */
+  } 
 }
 
 
